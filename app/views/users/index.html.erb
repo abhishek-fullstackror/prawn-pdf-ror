@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Users</h1>
+
+<div id="users">
+<%= link_to "Generate PDF", generate_pdf_users_path(format: :pdf), class: "btn btn-primary" %>
+
+<table>
+ <thead>
+ <th>Name</th>
+ <th>Email</th>
+ <th>Phone</th>
+ </thead>
+  <tbody>
+    <%= render partial: 'user', collection:@users%>
+  </tbody>
+</table>
+  
+</div>
+
+<%= link_to "New user", new_user_path %>
